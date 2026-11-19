@@ -144,6 +144,12 @@ export default function Analisis() {
             <p className="muted">Resultado {profile.source === "camara" ? "del análisis por cámara (heurístico)" : "del test manual"}</p>
             <h2 className="text-xl font-bold">Piel {SKIN_INFO[profile.skin].label.toLowerCase()}</h2>
             <p className="text-sm">{SKIN_INFO[profile.skin].text}</p>
+            {profile.source === "camara" && (
+              <div className="rounded-xl bg-nude p-2 text-xs">
+                <p className="mb-1">La cámara es una estimación. ¿Tu piel se siente distinta? Corrígela:</p>
+                <div className="flex flex-wrap gap-1.5">{Object.entries(SKIN_INFO).map(([k, v]) => <button key={k} className={`chip ${profile.skin === k ? "chip-on" : ""}`} onClick={() => setProfile({ skin: k })}>{v.label}</button>)}</div>
+              </div>
+            )}
             {profile.acne && <p className="chip">Signos de acné (etiqueta adicional, no es un tipo de piel)</p>}
             {result?.reasons.map((r) => <p key={r} className="muted">• {r}</p>)}
             <p className="rounded-xl bg-nude p-2 text-xs">Resultado orientativo, no es un diagnóstico médico. Si tienes acné intenso, dolor, cicatrices o dudas, consulta a un dermatólogo.</p>
