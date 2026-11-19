@@ -27,7 +27,7 @@ Sin backend: el estado (carrito, puntos, perfil, recordatorios) vive en `localSt
 ## Qué está simulado o es heurístico
 
 - **Análisis por cámara** (`lib/skin.ts`): no es un modelo de visión entrenado. Mide brillo (zona T vs. mejillas), textura, enrojecimiento y puntos rojizos en un óvalo central, con umbrales aproximados que **no están validados** clínicamente. Para conectar un modelo real (MediaPipe Face Landmarker o TensorFlow.js) hay comentarios en ese archivo. El acné se muestra como etiqueta adicional, no como tipo de piel.
-- **Asesoría con productos que ya tiene** (`app/asesoria`): la clienta marca qué tipos de producto aparecen en la foto; no hay reconocimiento de imagen. Comentario en el código sobre dónde conectar una API de visión.
+- **Asesoría con productos que ya tiene** (`app/asesoria`): lee la etiqueta con OCR en el navegador (Tesseract.js, español e inglés) y busca palabras clave ("bloqueador", "serum", "shampoo"…) para identificar el producto y explicar su uso. Es real pero limitado: depende de la calidad de la foto y de las palabras clave; si falla, la clienta elige el tipo. Los datos de idioma de Tesseract se descargan de un CDN; la foto no se envía a ningún servidor.
 - Pagos, puntos, códigos y "usuarias" son locales y ficticios; cualquiera podría modificar `localStorage`.
 
 ## Fuentes (tipos de piel)
