@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Plus } from "lucide-react";
 import { Product, cop, useStore } from "@/lib/store";
+import Pack from "./Pack";
 import { px } from "./Photo";
 
 const SHAPE: Record<string, string> = { Sérum: "dropper", Hidratante: "jar", Mascarilla: "jar", "Mascarilla capilar": "jar", Manos: "jar", Pies: "jar", "Contorno de ojos": "tube", "Protector solar": "tube", "Protector solar corporal": "tube", "Brazos y piernas": "tube", Limpiador: "pump", Tónico: "pump", Shampoo: "pump", Acondicionador: "pump", "Hidratante corporal": "pump", "Jabón íntimo": "pump", Desodorante: "tube" };
@@ -15,8 +16,7 @@ export default function ProductCard({ p }: { p: Product }) {
   return (
     <div className="group flex flex-col">
       <Link href={`/producto/${p.id}`} className={`relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-2xl transition group-hover:shadow-lg ${tone(p.id)}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={productPhoto(p.sub)} alt={`${p.name} (foto ilustrativa)`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition group-hover:scale-105" />
+        <Pack p={p} className="absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105" />
         <span className="absolute left-3 top-3 rounded-full bg-white/85 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#4b2e21]">{p.sub}</span>
       </Link>
       <div className="flex items-start justify-between gap-2 px-1 pt-3">

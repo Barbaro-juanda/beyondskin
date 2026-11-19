@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { PRODUCTS, productById, cop, useStore } from "@/lib/store";
-import ProductCard, { tone } from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
+import Pack from "@/components/Pack";
 
 const TABS = ["Acerca", "Ingredientes", "Reseñas", "Modo de uso"];
 export default function Detail({ id }: { id: string }) {
@@ -21,7 +22,7 @@ export default function Detail({ id }: { id: string }) {
   return (
     <div className="space-y-5">
       <p className="muted"><Link href="/">Inicio</Link> / <Link href="/catalogo">Catálogo</Link> / {p.name}</p>
-      <div className={`flex aspect-[4/3] items-end rounded-3xl p-5 ${tone(p.id)}`}><span className="display text-5xl leading-none">{p.sub}</span></div>
+      <div className="overflow-hidden rounded-3xl"><Pack p={p} className="mx-auto max-h-[28rem] w-full" /></div>
       <div className="card space-y-3">
         <p className="muted"> 156 reseñas (ejemplo) · {p.cat}</p>
         <h1 className="h1">{p.name}</h1>
