@@ -156,6 +156,11 @@ export default function Analisis() {
               <Link href="/kits" className="btn">Ver kit y agregar</Link>
             </div>
           )}
+          <div className="space-y-2">
+            <h3 className="serif text-2xl">No estás sola: tu piel es parte de la comunidad</h3>
+            <div className="grid grid-cols-4 gap-2">{[3431739, 7479659, 9038626, 5007995].map((id) => <Photo key={id} id={id} alt="Persona con piel natural (imagen ilustrativa)" className="aspect-[3/4] w-full rounded-2xl" />)}</div>
+            <p className="muted">Pieles distintas, una misma comunidad. Fotos ilustrativas de Pexels: no representan un tipo de piel ni un resultado.</p>
+          </div>
           <h3 className="font-semibold">Productos sugeridos</h3>
           <div className="grid grid-cols-2 gap-3">{picks.slice(0, 6).map((p) => <ProductCard key={p.id} p={p} />)}</div>
           <button className="btn btn-ghost" onClick={() => { setMode("inicio"); setProgress(0); }}>Repetir análisis</button>
