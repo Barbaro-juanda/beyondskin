@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useStore, recommend, cop, kitPrice } from "@/lib/store";
 import { SKIN_INFO } from "@/lib/skin";
+import Photo from "@/components/Photo";
 import { Sparkles, Camera, Store, Gift, Wallet } from "lucide-react";
 
 const tiles = [
@@ -23,6 +24,7 @@ export default function Home() {
         <p className="mt-2 text-sm">Descubre tu rutina ideal, acumula puntos y no te quedes sin tus productos favoritos.</p>
         <Link href="/analisis" className="btn mt-4">Empezar mi análisis</Link>
       </section>
+      <Photo id={29044029} alt="Productos de skincare minimalistas (imagen ilustrativa)" className="h-56 w-full rounded-3xl" />
       {s.profile.skin && kit && (
         <section className="card">
           <p className="muted">Tu último resultado (orientativo)</p>

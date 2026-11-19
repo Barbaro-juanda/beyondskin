@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { PRODUCTS } from "@/lib/store";
+import Photo from "@/components/Photo";
 import ProductCard from "@/components/ProductCard";
 
 const CATS = [["todas", "Todo"], ["rostro", "Rostro"], ["cabello", "Cabello"], ["cuerpo", "Cuerpo"], ["manos-pies", "Manos y pies"], ["intima", "Zona íntima"]];
@@ -19,6 +20,7 @@ export default function Catalogo() {
     <div className="space-y-3">
       <div className="border-b border-[#efe3b8] pb-4"><h1 className="h1 !text-4xl">Catálogo</h1><p className="muted mt-1">{list.length} productos</p></div>
       <p className="muted">Todos los productos son ficticios (prototipo).</p>
+      <Photo id={10825668} alt="Sérums y cosméticos (imagen ilustrativa)" className="h-40 w-full rounded-3xl" />
       <Row items={CATS} v={cat} set={setCat} />
       <p className="muted">Tipo de piel</p><Row items={SKINS} v={skin} set={setSkin} />
       <p className="muted">Tipo de cabello</p><Row items={HAIRS} v={hair} set={setHair} />

@@ -7,7 +7,7 @@ export default function Footer() {
         <div><p className="display mb-2 text-sm tracking-wide">Comunidad</p><ul className="space-y-1 text-sm opacity-90"><li><Link href="/cuenta">Puntos y recompensas</Link></li><li><Link href="/asesoria">Asesoría</Link></li></ul></div>
         <p className="serif text-4xl sm:text-right">Beyond Skin</p>
       </div>
-      <p className="mx-auto mt-6 max-w-5xl text-xs opacity-70">Beyond Skin es una marca ficticia (prototipo universitario). Productos, precios y textos son de ejemplo. Nada aquí es un diagnóstico médico.</p>
+      <p className="mx-auto mt-6 max-w-5xl text-xs opacity-70">Beyond Skin es una marca ficticia (prototipo universitario). Productos, precios y textos son de ejemplo. Nada aquí es un diagnóstico médico. Fotos ilustrativas: Pexels.</p>
     </footer>
   );
 }

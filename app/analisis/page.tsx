@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useStore, recommend, cop, kitPrice, kitFullPrice, Profile } from "@/lib/store";
 import { analyzeFrame, classify, SKIN_INFO, SkinResult } from "@/lib/skin";
 import ProductCard from "@/components/ProductCard";
+import Photo from "@/components/Photo";
 
 type Mode = "inicio" | "consent" | "camara" | "test" | "resultado";
 const SKIN_Q = [
@@ -63,6 +64,7 @@ export default function Analisis() {
       <h1 className="h1">Mi piel</h1>
       <p className="muted">Resultado orientativo, no es un diagnóstico médico.</p>
 
+      {mode === "inicio" && <Photo id={6642970} alt="Textura de piel (imagen ilustrativa)" className="h-44 w-full rounded-3xl" />}
       {mode === "inicio" && (
         <div className="space-y-3">
           <button className="card w-full text-left" onClick={() => setMode(s.consent ? "consent" : "consent")}>
