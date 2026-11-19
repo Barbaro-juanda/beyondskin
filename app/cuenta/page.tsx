@@ -17,7 +17,7 @@ export default function Cuenta() {
   return (
     <div className="space-y-4">
       <h1 className="h1">Puntos y billetera 💳</h1>
-      <div className="card bg-gradient-to-br from-rose to-[#fff6cf] text-center">
+      <div className="card bg-gradient-to-br from-rose to-[#f2e6b3] text-center">
         <p className="muted">Tus puntos</p><p className="text-4xl font-bold text-sage-deep">{s.points}</p>
         <p className="muted">1 punto por cada $1.000 COP comprados (puntos ficticios).</p>
       </div>

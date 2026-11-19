@@ -20,7 +20,7 @@ export default function Nav() {
     <>
       <header className="sticky top-0 z-20 border-b border-[#efe3b8] bg-rose/80 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
-          <Link href="/" className="text-lg font-bold tracking-tight text-sage-deep">● Beyond Skin</Link>
+          <Link href="/" className="serif text-2xl text-sage-deep">Beyond Skin</Link>
           <span className="chip">{s.points} pts</span>
         </div>
       </header>

@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
-:root { --background: #ffffff; --foreground: #3b2a1d; }
+:root { --background: #ffffff; --foreground: #4b2e21; }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-rose: #fbefb4;
-  --color-rose-deep: #a8683a;
-  --color-nude: #fff8dc;
-  --color-sage: #b88a5e;
-  --color-sage-deep: #7b4b2a;
+  --color-rose: #f5dd9c;
+  --color-rose-deep: #532620;
+  --color-nude: #f2e6b3;
+  --color-sage: #7a5240;
+  --color-sage-deep: #4b2e21;
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-anton);
+  --font-serif: var(--font-dm-serif);
 }
 
 body { background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), system-ui, sans-serif; padding-bottom: 5rem; }
@@ -18,10 +20,14 @@ body { background: var(--background); color: var(--foreground); font-family: var
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border-radius: 999px; padding: .65rem 1.1rem; font-weight: 600; font-size: .9rem; background: var(--color-sage-deep); color: #fff; transition: opacity .15s; }
 .btn:hover { opacity: .9; }
 .btn:disabled { opacity: .4; }
-.btn-soft { background: var(--color-rose); color: #5c3a20; }
+.btn-soft { background: var(--color-rose); color: #4b2e21; }
 .btn-ghost { background: transparent; border: 1px solid var(--color-sage); color: var(--color-sage-deep); }
 .chip { display: inline-block; border-radius: 999px; padding: .2rem .65rem; font-size: .75rem; background: var(--color-nude); color: #7a5a52; }
 .chip-on { background: var(--color-sage-deep); color: #fff; }
-.h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; }
+.h1 { font-family: var(--font-anton), Impact, sans-serif; font-size: 2rem; font-weight: 400; letter-spacing: .01em; text-transform: uppercase; line-height: 1.05; }
+.serif { font-family: var(--font-dm-serif), serif; }
+.display { font-family: var(--font-anton), Impact, sans-serif; text-transform: uppercase; }
+.btn { border-radius: 999px; }
+.card { box-shadow: 0 6px 24px -14px #4b2e2166; }
 .muted { color: #8a7458; font-size: .85rem; }
 .input { width: 100%; border: 1px solid #e6d9a8; border-radius: .8rem; padding: .6rem .8rem; background: #fff; }

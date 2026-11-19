@@ -16,9 +16,9 @@ export default function Home() {
   const { kit } = recommend(s.profile);
   return (
     <div className="space-y-4">
-      <section className="rounded-3xl bg-gradient-to-br from-rose to-[#fff6cf] p-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-sage-deep">Beyond Skin</p>
-        <h1 className="h1 mt-1">Tu piel, tu rutina, tu comunidad.</h1>
+      <section className="rounded-3xl bg-gradient-to-br from-rose to-[#f2e6b3] p-6 pt-10 pb-10">
+        <p className="serif text-xl text-sage-deep">Beyond Skin</p>
+        <h1 className="h1 mt-1 !text-5xl">Tu piel, tu rutina, tu comunidad.</h1>
         <p className="mt-2 text-sm">Descubre tu rutina ideal, acumula puntos y no te quedes sin tus productos favoritos.</p>
         <Link href="/analisis" className="btn mt-4">Empezar mi análisis</Link>
       </section>

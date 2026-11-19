@@ -2,7 +2,7 @@
 
 Prototipo universitario (Next.js App Router + TypeScript + Tailwind). **Beyond Skin es una marca ficticia**: productos, precios, puntos y textos son de ejemplo. **Ningún resultado es un diagnóstico médico.**
 
-Paleta: butter yellow (primario), blanco (secundario), café cuero (terciario).
+Paleta: butter yellow `#F5DD9C` / whipped butter `#F2E6B3` (primario), blanco (secundario), café cuero `#4B2E21` (terciario). Tipografías: Anton (títulos) y DM Serif Display (marca).
 
 ## Cómo correrlo
 

@@ -1,23 +1,24 @@
 "use client";
+import Link from "next/link";
 import { Product, cop, useStore } from "@/lib/store";
 
+export const tone = (id: string) => ["bg-[#4b2e21] text-[#f2e6b3]", "bg-[#f5dd9c] text-[#4b2e21]", "bg-[#7a5240] text-[#f2e6b3]", "bg-[#f2e6b3] text-[#4b2e21]"][id.charCodeAt(id.length - 1) % 4];
 const ICON: Record<string, string> = { rostro: "🧴", cabello: "💆‍♀️", cuerpo: "🛁", "manos-pies": "🤲", intima: "🌸" };
 
 export default function ProductCard({ p }: { p: Product }) {
   const { add } = useStore();
   return (
-    <div className="card flex flex-col gap-1">
-      <div className="flex h-20 items-center justify-center rounded-xl bg-gradient-to-br from-nude to-[#fff6cf] text-3xl">{ICON[p.cat]}</div>
-      <span className="chip w-fit">{p.sub}</span>
-      <h3 className="text-sm font-semibold leading-tight">{p.name}</h3>
-      <p className="muted">{p.desc}</p>
-      {p.cat === "intima" && <p className="text-[11px] text-[#8a7458]">Solo higiene externa. Consulta a un profesional de la salud ante molestias.</p>}
-      <p className="text-[11px] text-[#8a7458]">{[...p.skin.filter((x) => x !== "todas"), ...p.hair].join(" · ") || "Todos los tipos"}</p>
-      <div className="mt-auto flex items-center justify-between pt-1">
-        <span className="font-bold text-sage-deep">{cop(p.price)}</span>
-        <button className="btn !px-3 !py-1.5" onClick={() => add(p.id)}>Agregar</button>
+    <div className="flex flex-col gap-2">
+      <Link href={`/producto/${p.id}`} className={`relative flex aspect-[4/5] flex-col justify-between rounded-3xl p-3 ${tone(p.id)}`}>
+        <span className="display text-xl leading-none">{p.sub}</span>
+        <span className="self-end text-5xl">{ICON[p.cat]}</span>
+        <span className="absolute right-3 top-3 text-[10px] opacity-70">Ficticio</span>
+      </Link>
+      <h3 className="px-1 text-sm font-semibold leading-tight">{p.name}</h3>
+      <div className="mt-auto flex items-center gap-2">
+        <span className="btn btn-soft !px-3 !py-1.5">{cop(p.price)}</span>
+        <button className="btn flex-1 !px-3 !py-1.5" onClick={() => add(p.id)}>🛍️ Agregar</button>
       </div>
-      <p className="text-[10px] text-[#b6a9a5]">Producto ficticio</p>
     </div>
   );
 }

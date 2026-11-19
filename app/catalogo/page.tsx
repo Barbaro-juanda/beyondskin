@@ -23,7 +23,7 @@ export default function Catalogo() {
       <p className="muted">Tipo de piel</p><Row items={SKINS} v={skin} set={setSkin} />
       <p className="muted">Tipo de cabello</p><Row items={HAIRS} v={hair} set={setHair} />
       {cat === "intima" && <p className="rounded-xl bg-nude p-2 text-xs">Productos de higiene y cuidado externo. No tratan ni previenen infecciones. Consulta a un profesional de la salud ante molestias.</p>}
-      <div className="grid grid-cols-2 gap-3">{list.map((p) => <ProductCard key={p.id} p={p} />)}</div>
+      <div className="grid grid-cols-2 gap-4">{list.map((p) => <ProductCard key={p.id} p={p} />)}</div>
       {!list.length && <p className="muted">Sin resultados con estos filtros.</p>}
     </div>
   );
