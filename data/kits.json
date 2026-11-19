@@ -1,0 +1,10 @@
+[
+{"id":"k-grasa","name":"Kit Piel Grasa","need":"grasa","desc":"Limpia, equilibra e hidrata sin pesadez.","items":["r1","r6","r8","r10"]},
+{"id":"k-mixta","name":"Kit Piel Mixta","need":"mixta","desc":"Rutina para zona T con brillo y mejillas normales.","items":["r1","r3","r8","r10"]},
+{"id":"k-seca","name":"Kit Piel Seca","need":"seca","desc":"Hidratación en capas y protección diaria.","items":["r2","r7","r9","r11"]},
+{"id":"k-normal","name":"Kit Piel Normal","need":"normal","desc":"Mantén tu piel luminosa y protegida.","items":["r2","r3","r5","r10"]},
+{"id":"k-sensible","name":"Kit Piel Sensible","need":"sensible","desc":"Productos sin fragancia añadida para pieles delicadas.","items":["r2","r4","r7","r11"]},
+{"id":"k-acne","name":"Kit Piel con Acné","need":"acne","desc":"Cuidado cosmético para piel con imperfecciones.","items":["r1","r6","r15","r16","r10"]},
+{"id":"k-cabello","name":"Kit Cuidado Capilar","need":"cabello","desc":"Shampoo, acondicionador y mascarilla para tu tipo de cabello.","items":["c2","c5","c7"]},
+{"id":"k-cuerpo","name":"Kit Rutina Corporal","need":"cuerpo","desc":"Exfolia, hidrata y protege tu cuerpo.","items":["b3","b1","b5","b6"]}
+]
