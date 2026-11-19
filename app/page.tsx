@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { useStore, recommend, cop, kitPrice } from "@/lib/store";
 import { SKIN_INFO } from "@/lib/skin";
+import { Sparkles, Camera, Store, Gift, Wallet } from "lucide-react";
 
 const tiles = [
-  { href: "/analisis", t: "Analiza tu piel", d: "Con cámara (en tu navegador) o con un test.", i: "✨" },
-  { href: "/asesoria", t: "Asesoría con lo que ya tienes", d: "Sube una foto de tus productos.", i: "📸" },
-  { href: "/catalogo", t: "Catálogo", d: "Rostro, cabello, cuerpo, manos y pies, zona íntima.", i: "🧴" },
-  { href: "/kits", t: "Kits con descuento", d: "15% menos que por separado.", i: "🎁" },
-  { href: "/cuenta", t: "Puntos y recordatorios", d: "Canjea y recompra a tiempo.", i: "💳" },
+  { href: "/analisis", t: "Analiza tu piel", d: "Con cámara (en tu navegador) o con un test.", I: Sparkles },
+  { href: "/asesoria", t: "Asesoría con lo que ya tienes", d: "Sube una foto de tus productos.", I: Camera },
+  { href: "/catalogo", t: "Catálogo", d: "Rostro, cabello, cuerpo, manos y pies, zona íntima.", I: Store },
+  { href: "/kits", t: "Kits con descuento", d: "15% menos que por separado.", I: Gift },
+  { href: "/cuenta", t: "Puntos y recordatorios", d: "Canjea y recompra a tiempo.", I: Wallet },
 ];
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
       <div className="grid gap-3 sm:grid-cols-2">
         {tiles.map((t) => (
           <Link key={t.href} href={t.href} className="card flex items-center gap-3">
-            <span className="text-2xl">{t.i}</span>
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-nude"><t.I size={22} strokeWidth={1.5} /></span>
             <span><b className="block text-sm">{t.t}</b><span className="muted">{t.d}</span></span>
           </Link>
         ))}

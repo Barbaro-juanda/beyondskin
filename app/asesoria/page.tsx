@@ -29,7 +29,7 @@ export default function Asesoria() {
 
   return (
     <div className="space-y-4">
-      <h1 className="h1">Asesoría 📸</h1>
+      <h1 className="h1">Asesoría</h1>
       <p className="muted">Sube una foto de los productos que ya tienes. La foto se queda en tu dispositivo.</p>
       <p className="rounded-xl bg-nude p-2 text-xs">Función simulada: aún no reconocemos productos en la imagen; marca tú los tipos que aparecen en la foto.</p>
       <input type="file" accept="image/*" className="input" onChange={(e) => { const f = e.target.files?.[0]; if (f) { setImg(URL.createObjectURL(f)); setDone(false); } }} />

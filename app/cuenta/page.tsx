@@ -16,7 +16,7 @@ export default function Cuenta() {
 
   return (
     <div className="space-y-4">
-      <h1 className="h1">Puntos y billetera 💳</h1>
+      <h1 className="h1">Puntos y billetera</h1>
       <div className="card bg-gradient-to-br from-rose to-[#f2e6b3] text-center">
         <p className="muted">Tus puntos</p><p className="text-4xl font-bold text-sage-deep">{s.points}</p>
         <p className="muted">1 punto por cada $1.000 COP comprados (puntos ficticios).</p>
@@ -29,7 +29,7 @@ export default function Cuenta() {
         {m && <p className="text-sm text-sage-deep">{m}</p>}
       </div>
       <div className="card space-y-1">
-        <h2 className="font-semibold">Código exclusivo 💌</h2>
+        <h2 className="font-semibold">Código exclusivo</h2>
         {loyal ? <p>Tu código: <b className="rounded bg-nude px-2 py-0.5">{PROMO_CODE}</b> — 15% en tu próxima compra.</p> : <p className="muted">Acumula {PROMO_MIN_LIFETIME} puntos históricos para desbloquear un código exclusivo (llevas {s.lifetime}).</p>}
       </div>
       <div className="card space-y-2">

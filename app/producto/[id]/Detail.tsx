@@ -15,7 +15,7 @@ export default function Detail({ id }: { id: string }) {
   const text = [
     p.desc + " Producto ficticio de ejemplo para el prototipo.",
     "Lista de ingredientes ficticia: agua, glicerina, extracto botánico, vitamina E. (Dato de ejemplo, no real.)",
-    "★★★★★ 4.8 · 156 reseñas de ejemplo. Aún no hay reseñas reales.",
+    " 4.8 · 156 reseñas de ejemplo. Aún no hay reseñas reales.",
     "Aplica según las indicaciones del envase. Si sientes molestias, suspende el uso y consulta a un profesional de la salud.",
   ];
   return (
@@ -23,14 +23,14 @@ export default function Detail({ id }: { id: string }) {
       <p className="muted"><Link href="/">Inicio</Link> / <Link href="/catalogo">Catálogo</Link> / {p.name}</p>
       <div className={`flex aspect-[4/3] items-end rounded-3xl p-5 ${tone(p.id)}`}><span className="display text-5xl leading-none">{p.sub}</span></div>
       <div className="card space-y-3">
-        <p className="muted">★★★★★ 156 reseñas (ejemplo) · {p.cat}</p>
+        <p className="muted"> 156 reseñas (ejemplo) · {p.cat}</p>
         <h1 className="h1">{p.name}</h1>
         <p className="text-sm">{p.desc}</p>
         <p className="text-2xl font-bold">{cop(p.price * (size === 150 ? 1.4 : 1))}</p>
         <div><p className="muted mb-1 uppercase">Tamaño</p>{[100, 150].map((s) => <button key={s} onClick={() => setSize(s)} className={`chip mr-2 ${size === s ? "chip-on" : ""}`}>{s} ml</button>)}</div>
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-3 rounded-full border border-[#4b2e21] px-3 py-1.5"><button onClick={() => setQty(Math.max(1, qty - 1))}>−</button>{qty}<button onClick={() => setQty(qty + 1)}>+</button></div>
-          <button className="btn flex-1" onClick={() => add(p.id, qty)}>🛍️ Agregar al carrito</button>
+          <button className="btn flex-1" onClick={() => add(p.id, qty)}> Agregar al carrito</button>
         </div>
         {p.cat === "intima" && <p className="muted">Solo higiene externa. Consulta a un profesional de la salud ante molestias.</p>}
       </div>

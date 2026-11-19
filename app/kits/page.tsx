@@ -6,7 +6,7 @@ export default function Kits() {
   const rec = recommend(s.profile).kit?.id;
   return (
     <div className="space-y-3">
-      <h1 className="h1">Kits 🎁</h1>
+      <h1 className="h1">Kits</h1>
       <p className="muted">15% menos que comprar por separado. Productos ficticios.</p>
       {[...KITS].sort((a, b) => (a.id === rec ? -1 : b.id === rec ? 1 : 0)).map((k) => (
         <div key={k.id} className={`card space-y-2 ${k.id === rec ? "ring-2 ring-sage" : ""}`}>

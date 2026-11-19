@@ -60,16 +60,16 @@ export default function Analisis() {
 
   return (
     <div className="space-y-4">
-      <h1 className="h1">Mi piel ✨</h1>
+      <h1 className="h1">Mi piel</h1>
       <p className="muted">Resultado orientativo, no es un diagnóstico médico.</p>
 
       {mode === "inicio" && (
         <div className="space-y-3">
           <button className="card w-full text-left" onClick={() => setMode(s.consent ? "consent" : "consent")}>
-            <b>📷 Análisis con cámara</b><span className="muted block">~10 segundos. Se procesa en tu navegador.</span>
+            <b> Análisis con cámara</b><span className="muted block">~10 segundos. Se procesa en tu navegador.</span>
           </button>
           <button className="card w-full text-left" onClick={() => setMode("test")}>
-            <b>📝 Test manual</b><span className="muted block">Sin cámara: unas preguntas rápidas.</span>
+            <b> Test manual</b><span className="muted block">Sin cámara: unas preguntas rápidas.</span>
           </button>
         </div>
       )}
@@ -148,7 +148,7 @@ export default function Analisis() {
           </div>
           {kit && (
             <div className="card space-y-2">
-              <h3 className="font-semibold">🎁 {kit.name}</h3>
+              <h3 className="font-semibold"> {kit.name}</h3>
               <p className="muted">{kit.desc}</p>
               <p><b className="text-sage-deep">{cop(kitPrice(kit))}</b> <s className="muted">{cop(kitFullPrice(kit))}</s></p>
               <Link href="/kits" className="btn">Ver kit y agregar</Link>

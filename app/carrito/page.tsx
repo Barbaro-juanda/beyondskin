@@ -23,7 +23,7 @@ export default function Carrito() {
 
   if (done) return (
     <div className="card space-y-2 text-center">
-      <p className="text-3xl">🎉</p><h1 className="h1">¡Compra simulada exitosa!</h1>
+      <p className="text-3xl"></p><h1 className="h1">¡Compra simulada exitosa!</h1>
       <p>Total {cop(done.total)} · Ganaste <b>{done.pts} puntos</b>.</p>
       <p className="muted">No se realizó ningún pago real.</p>
       <Link href="/cuenta" className="btn">Ver mis puntos</Link>
@@ -32,7 +32,7 @@ export default function Carrito() {
 
   return (
     <div className="space-y-3">
-      <h1 className="h1">Carrito 🛍️</h1>
+      <h1 className="h1">Carrito</h1>
       {!lines.length && <p className="muted">Tu carrito está vacío. <Link href="/catalogo" className="underline">Ir a la tienda</Link></p>}
       {lines.map((l) => (
         <div key={l.key} className="card flex items-center justify-between gap-2">
